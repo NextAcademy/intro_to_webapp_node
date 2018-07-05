@@ -1,0 +1,52 @@
+body {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.container {
+	margin: 0 auto;
+	background-color: gold;
+	padding: 50px;
+	border-radius: 10px;
+	max-width: 600px;
+}
+
+.input-box {
+	width: 100px;
+	height: 70px;
+	font-size: 34px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.operator-box {
+	width: 85px;
+	height: 75px;
+	background: white;
+	line-height: 75px;
+	font-size: 34px;
+	text-align: center;
+	border: 1px solid gray;
+}
+
+.input-submit {
+	height: 75px;
+	font-size: 34px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid gray;
+	padding: 10px 20px;
+	background-color: #38ae67;
+	color: white;
+}
+
+.answer-box {
+	width: 450px;
+	height: 70px;
+	font-size: 34px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid gray;
+	margin-top: 20px;
+}

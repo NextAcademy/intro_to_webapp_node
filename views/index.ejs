@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is the TITLE of the webpage! -->
+    <title>Calc-U-Later</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Calc U Later!</h1>
+    <div class="container">
+
+        <!-- Calculator form STARTS here! -->
+        <form action="/calculator" method = "post">
+            <!-- Input for FIRST number is here! -->
+            <input type="text" name="first_num" class="input-box" value="<%= first_number %>" autofocus></input>
+            <!-- Selection for math operator is here! -->
+            <select name="math_operator" class="operator-box">
+                <option value="+">&plus;</option>
+                <option value="-">&minus;</option>
+                <option value="/">&divide;</option>
+                <option value="*">&times;</option>
+            </select>
+            <!-- Input for SECOND number is here! -->
+            <input type="text" name="second_num" class="input-box" value="<%= second_number %>"></input>
+            <!-- SUBMIT button is here! -->
+            <input type="submit" class="input-submit"></input>
+        </form>
+        <!-- Calculator form ENDS here! -->
+
+        <input type="text" class="answer-box" placeholder="Answer" value="<%= result %>"></input>
+    </div>
+</body>
+</html>
