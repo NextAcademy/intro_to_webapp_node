@@ -19,6 +19,7 @@ app.get("/calculator", function(req, res) {
   res.render("index", {
     first_number: null,
     second_number: null,
+    math_operator: "+",
     result: null
   });
 });
@@ -30,13 +31,19 @@ app.post("/calculator", function(req, res) {
     result = parseInt(req.body.first_num) + parseInt(req.body.second_num);
   } else if (req.body.math_operator == "-") {
     result = parseInt(req.body.first_num) - parseInt(req.body.second_num);
+  } else if (req.body.math_operator == "*") {
+    result = parseInt(req.body.first_num) * parseInt(req.body.second_num);
+  } else if (req.body.math_operator == "/") {
+    result = parseInt(req.body.first_num) / parseInt(req.body.second_num);
   }
 
   res.render("index", {
     first_number: req.body.first_num,
     second_number: req.body.second_num,
+    math_operator: req.body.math_operator,
     result: result
   });
 });
 
-app.listen(8080, () => console.log("App listening on port 8080!"));
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log(`App listening on port ${port}!`));
