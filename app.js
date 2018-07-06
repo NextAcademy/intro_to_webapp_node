@@ -11,6 +11,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+app.get("/hello", function(req, res) {
+  res.render("hello");
+});
+
 app.get("/calculator", function(req, res) {
   res.render("index", {
     first_number: null,
@@ -20,7 +24,13 @@ app.get("/calculator", function(req, res) {
 });
 
 app.post("/calculator", function(req, res) {
-  const result = 2;
+  let result;
+
+  if (req.body.math_operator == "+") {
+    result = parseInt(req.body.first_num) + parseInt(req.body.second_num);
+  } else if (req.body.math_operator == "-") {
+    result = parseInt(req.body.first_num) - parseInt(req.body.second_num);
+  }
 
   res.render("index", {
     first_number: req.body.first_num,
