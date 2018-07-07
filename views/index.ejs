@@ -15,10 +15,10 @@
             <input type="text" name="first_num" class="input-box" value="<%= first_number %>" autofocus></input>
             <!-- Selection for math operator is here! -->
             <select name="math_operator" class="operator-box">
-                <option value="+">&plus;</option>
-                <option value="-">&minus;</option>
-                <option value="/">&divide;</option>
-                <option value="*">&times;</option>
+  			  <option value="+">&plus;</option>
+              <option value="-">&minus;</option>
+              <option value="/">&divide;</option>
+              <option value="*">&times;</option>
             </select>
             <!-- Input for SECOND number is here! -->
             <input type="text" name="second_num" class="input-box" value="<%= second_number %>"></input>
@@ -29,5 +29,10 @@
 
         <input type="text" class="answer-box" placeholder="Answer" value="<%= result %>"></input>
     </div>
+
+    <script>
+      var element = document.getElementsByClassName("operator-box")[0];
+      element.value = "<%= math_operator %>";
+    </script>
 </body>
 </html>
